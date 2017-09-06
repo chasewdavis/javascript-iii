@@ -40,9 +40,17 @@ var employees = [{
 
 
 
-
-
-
+function employeeUpdater(){
+  return employees.filter(function(e){
+    if(e.firstName==="Theo"){
+      return false;
+    }else if(e.firstName==="Lorie"){
+      e.department="HR";
+      return true;
+    }
+    return true;
+  })
+}
 
 // === PROBLEM 2 ==========
 
@@ -56,6 +64,18 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 // Code here
 
+//here's what was asked for... higher order funcitons are better though
+function removeDuplicates() {
+  for(var i = workplaceAccidents.length-1; i > 0; i--){
+    for(var j = 0; j < i; j++){
+      if(workplaceAccidents[i]===workplaceAccidents[j]){
+        workplaceAccidents.splice(j,1);
+        j--;
+      }
+    }
+  }
+  return workplaceAccidents;
+}
 
 
 
@@ -87,8 +107,8 @@ var cat = {
 var grumpyActivity;
 var fluffy2ndFriend;
 
-
-
+grumpyActivity = cat.catFriends[0].activities[1];
+fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
