@@ -33,6 +33,11 @@
 
 function showValues( obj ) {
   // CODE HERE
+  var str = ""
+  for(var key in obj){
+    str += obj[key];
+  }
+  return str;
 }
 
 
@@ -43,7 +48,14 @@ function showValues( obj ) {
 
 // CODE HERE
 
-
+function greaterThan10(obj){
+  for(var key in obj){
+    if(obj[key]>10){
+      obj[key] = 0;
+    }
+  }
+  return obj;
+}
 
 // ========================
 
@@ -52,7 +64,12 @@ function showValues( obj ) {
 
 // CODE HERE
 
-
+function double(obj){
+  for(var key in obj){
+    obj[key] *= 2;
+  }
+  return obj;
+}
 
 // ========================
 
@@ -61,6 +78,18 @@ function showValues( obj ) {
 
 // CODE HERE
 
+function secrets(obj){
+  console.log(" ");
+  var str = "";
+  for(var key in obj){
+    console.log(key + " " + obj[key]);
+    if(key.charAt(0)==="s" && key.charAt(1)==="h"){
+      str += obj[key];
+    }
+  }
+  console.log(str);
+  return str;
+}
 
 // ========================
 

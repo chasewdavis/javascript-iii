@@ -52,7 +52,21 @@ call your class Manager
 */
 
 
-
+class Manager {
+  constructor(first,last,email,age){
+    this.first_name = first;
+    this.last_name = last;
+    this.email = email;
+    this.age = age;
+    this.reports = [];
+  }
+  hire(e){
+    this.reports.push(e);
+  }
+  fire(i){
+    this.reports.splice(i,1);
+  }
+}
 
 
 /*
